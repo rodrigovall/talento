@@ -1,0 +1,4 @@
+Usuarios(email) 	---> claves ---> Rol 		---> Dado de baja?
+rodrigo@gmail.com	     123456	 Cliente		NO
+sofia@gmail.com		     123456	 Admin			NO
+maxi@gmail.com		     123456	 Cliente		SI		

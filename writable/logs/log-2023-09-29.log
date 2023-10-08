@@ -1,0 +1,213 @@
+INFO - 2023-09-29 00:12:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 00:12:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 00:19:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 18:15:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 18:16:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 20:11:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 20:12:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-09-29 20:12:29 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'vallejos_r' in C:\xampp\htdocs\primer_proyecto\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\xampp\htdocs\primer_proyecto\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', 'root', '', 'vallejos_r', 3306, '', 0)
+#1 C:\xampp\htdocs\primer_proyecto\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\primer_proyecto\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\primer_proyecto\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\primer_proyecto\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\primer_proyecto\system\Validation\Validation.php(278): CodeIgniter\Validation\StrictRules\Rules->is_unique('rodrigold945@gm...', 'email', Array, NULL, 'email')
+#6 C:\xampp\htdocs\primer_proyecto\system\Validation\Validation.php(182): CodeIgniter\Validation\Validation->processRules('email', 'email', 'rodrigold945@gm...', Array, Array)
+#7 C:\xampp\htdocs\primer_proyecto\system\Controller.php(141): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\primer_proyecto\app\Controllers\usuario_controller.php(27): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\primer_proyecto\system\CodeIgniter.php(932): App\Controllers\usuario_controller->formValidation()
+#10 C:\xampp\htdocs\primer_proyecto\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario_controller))
+#11 C:\xampp\htdocs\primer_proyecto\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\primer_proyecto\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'vallejos_r' in C:\xampp\htdocs\primer_proyecto\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\primer_proyecto\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\primer_proyecto\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\primer_proyecto\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\primer_proyecto\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\primer_proyecto\system\Validation\Validation.php(278): CodeIgniter\Validation\StrictRules\Rules->is_unique('rodrigold945@gm...', 'email', Array, NULL, 'email')
+#5 C:\xampp\htdocs\primer_proyecto\system\Validation\Validation.php(182): CodeIgniter\Validation\Validation->processRules('email', 'email', 'rodrigold945@gm...', Array, Array)
+#6 C:\xampp\htdocs\primer_proyecto\system\Controller.php(141): CodeIgniter\Validation\Validation->run()
+#7 C:\xampp\htdocs\primer_proyecto\app\Controllers\usuario_controller.php(27): CodeIgniter\Controller->validate(Array)
+#8 C:\xampp\htdocs\primer_proyecto\system\CodeIgniter.php(932): App\Controllers\usuario_controller->formValidation()
+#9 C:\xampp\htdocs\primer_proyecto\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario_controller))
+#10 C:\xampp\htdocs\primer_proyecto\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\primer_proyecto\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-09-29 20:12:29 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'vallejos_r'
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `usuarios`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(278): CodeIgniter\Validation\StrictRules\Rules->is_unique('rodrigold945@gmail.com', 'email', [...], null, 'email')
+ 5 SYSTEMPATH\Validation\Validation.php(182): CodeIgniter\Validation\Validation->processRules('email', 'email', 'rodrigold945@gmail.com', [...], [...])
+ 6 SYSTEMPATH\Controller.php(141): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\usuario_controller.php(27): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\usuario_controller->formValidation()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario_controller))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 20:18:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-09-29 20:18:50 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'vallejos_r' in C:\xampp\htdocs\primer_proyecto\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\xampp\htdocs\primer_proyecto\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', 'root', '', 'vallejos_r', 3306, '', 0)
+#1 C:\xampp\htdocs\primer_proyecto\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\primer_proyecto\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\primer_proyecto\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\primer_proyecto\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\primer_proyecto\system\Validation\Validation.php(278): CodeIgniter\Validation\StrictRules\Rules->is_unique('rodd945@gmail.c...', 'email', Array, NULL, 'email')
+#6 C:\xampp\htdocs\primer_proyecto\system\Validation\Validation.php(182): CodeIgniter\Validation\Validation->processRules('email', 'email', 'rodd945@gmail.c...', Array, Array)
+#7 C:\xampp\htdocs\primer_proyecto\system\Controller.php(141): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\primer_proyecto\app\Controllers\usuario_controller.php(27): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\primer_proyecto\system\CodeIgniter.php(932): App\Controllers\usuario_controller->formValidation()
+#10 C:\xampp\htdocs\primer_proyecto\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario_controller))
+#11 C:\xampp\htdocs\primer_proyecto\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\primer_proyecto\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'vallejos_r' in C:\xampp\htdocs\primer_proyecto\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\primer_proyecto\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\primer_proyecto\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\primer_proyecto\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\primer_proyecto\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\primer_proyecto\system\Validation\Validation.php(278): CodeIgniter\Validation\StrictRules\Rules->is_unique('rodd945@gmail.c...', 'email', Array, NULL, 'email')
+#5 C:\xampp\htdocs\primer_proyecto\system\Validation\Validation.php(182): CodeIgniter\Validation\Validation->processRules('email', 'email', 'rodd945@gmail.c...', Array, Array)
+#6 C:\xampp\htdocs\primer_proyecto\system\Controller.php(141): CodeIgniter\Validation\Validation->run()
+#7 C:\xampp\htdocs\primer_proyecto\app\Controllers\usuario_controller.php(27): CodeIgniter\Controller->validate(Array)
+#8 C:\xampp\htdocs\primer_proyecto\system\CodeIgniter.php(932): App\Controllers\usuario_controller->formValidation()
+#9 C:\xampp\htdocs\primer_proyecto\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario_controller))
+#10 C:\xampp\htdocs\primer_proyecto\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\primer_proyecto\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-09-29 20:18:50 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'vallejos_r'
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `usuarios`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(278): CodeIgniter\Validation\StrictRules\Rules->is_unique('rodd945@gmail.com', 'email', [...], null, 'email')
+ 5 SYSTEMPATH\Validation\Validation.php(182): CodeIgniter\Validation\Validation->processRules('email', 'email', 'rodd945@gmail.com', [...], [...])
+ 6 SYSTEMPATH\Controller.php(141): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\usuario_controller.php(27): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\usuario_controller->formValidation()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario_controller))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 20:19:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 20:19:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-09-29 20:19:56 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'vallejos_r' in C:\xampp\htdocs\primer_proyecto\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\xampp\htdocs\primer_proyecto\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', 'root', '', 'vallejos_r', 3306, '', 0)
+#1 C:\xampp\htdocs\primer_proyecto\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\primer_proyecto\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\primer_proyecto\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\primer_proyecto\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\primer_proyecto\system\Validation\Validation.php(278): CodeIgniter\Validation\StrictRules\Rules->is_unique('fernandozacaria...', 'email', Array, NULL, 'email')
+#6 C:\xampp\htdocs\primer_proyecto\system\Validation\Validation.php(182): CodeIgniter\Validation\Validation->processRules('email', 'email', 'fernandozacaria...', Array, Array)
+#7 C:\xampp\htdocs\primer_proyecto\system\Controller.php(141): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\primer_proyecto\app\Controllers\usuario_controller.php(27): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\primer_proyecto\system\CodeIgniter.php(932): App\Controllers\usuario_controller->formValidation()
+#10 C:\xampp\htdocs\primer_proyecto\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario_controller))
+#11 C:\xampp\htdocs\primer_proyecto\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\primer_proyecto\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'vallejos_r' in C:\xampp\htdocs\primer_proyecto\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\primer_proyecto\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\primer_proyecto\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\primer_proyecto\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\primer_proyecto\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\primer_proyecto\system\Validation\Validation.php(278): CodeIgniter\Validation\StrictRules\Rules->is_unique('fernandozacaria...', 'email', Array, NULL, 'email')
+#5 C:\xampp\htdocs\primer_proyecto\system\Validation\Validation.php(182): CodeIgniter\Validation\Validation->processRules('email', 'email', 'fernandozacaria...', Array, Array)
+#6 C:\xampp\htdocs\primer_proyecto\system\Controller.php(141): CodeIgniter\Validation\Validation->run()
+#7 C:\xampp\htdocs\primer_proyecto\app\Controllers\usuario_controller.php(27): CodeIgniter\Controller->validate(Array)
+#8 C:\xampp\htdocs\primer_proyecto\system\CodeIgniter.php(932): App\Controllers\usuario_controller->formValidation()
+#9 C:\xampp\htdocs\primer_proyecto\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario_controller))
+#10 C:\xampp\htdocs\primer_proyecto\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\primer_proyecto\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-09-29 20:19:56 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'vallejos_r'
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `usuarios`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(278): CodeIgniter\Validation\StrictRules\Rules->is_unique('fernandozacarias04@gmail.com', 'email', [...], null, 'email')
+ 5 SYSTEMPATH\Validation\Validation.php(182): CodeIgniter\Validation\Validation->processRules('email', 'email', 'fernandozacarias04@gmail.com', [...], [...])
+ 6 SYSTEMPATH\Controller.php(141): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\usuario_controller.php(27): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\usuario_controller->formValidation()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario_controller))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 20:21:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-09-29 20:21:17 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'vallejos_r' in C:\xampp\htdocs\primer_proyecto\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\xampp\htdocs\primer_proyecto\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', 'root', '', 'vallejos_r', 3306, '', 0)
+#1 C:\xampp\htdocs\primer_proyecto\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\primer_proyecto\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\primer_proyecto\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\primer_proyecto\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\primer_proyecto\system\Validation\Validation.php(278): CodeIgniter\Validation\StrictRules\Rules->is_unique('fernandozacaria...', 'email', Array, NULL, 'email')
+#6 C:\xampp\htdocs\primer_proyecto\system\Validation\Validation.php(182): CodeIgniter\Validation\Validation->processRules('email', 'email', 'fernandozacaria...', Array, Array)
+#7 C:\xampp\htdocs\primer_proyecto\system\Controller.php(141): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\primer_proyecto\app\Controllers\usuario_controller.php(27): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\primer_proyecto\system\CodeIgniter.php(932): App\Controllers\usuario_controller->formValidation()
+#10 C:\xampp\htdocs\primer_proyecto\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario_controller))
+#11 C:\xampp\htdocs\primer_proyecto\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\primer_proyecto\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'vallejos_r' in C:\xampp\htdocs\primer_proyecto\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\primer_proyecto\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\primer_proyecto\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\primer_proyecto\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\primer_proyecto\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\primer_proyecto\system\Validation\Validation.php(278): CodeIgniter\Validation\StrictRules\Rules->is_unique('fernandozacaria...', 'email', Array, NULL, 'email')
+#5 C:\xampp\htdocs\primer_proyecto\system\Validation\Validation.php(182): CodeIgniter\Validation\Validation->processRules('email', 'email', 'fernandozacaria...', Array, Array)
+#6 C:\xampp\htdocs\primer_proyecto\system\Controller.php(141): CodeIgniter\Validation\Validation->run()
+#7 C:\xampp\htdocs\primer_proyecto\app\Controllers\usuario_controller.php(27): CodeIgniter\Controller->validate(Array)
+#8 C:\xampp\htdocs\primer_proyecto\system\CodeIgniter.php(932): App\Controllers\usuario_controller->formValidation()
+#9 C:\xampp\htdocs\primer_proyecto\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario_controller))
+#10 C:\xampp\htdocs\primer_proyecto\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\primer_proyecto\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-09-29 20:21:17 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'vallejos_r'
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `usuarios`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(278): CodeIgniter\Validation\StrictRules\Rules->is_unique('fernandozacarias04@gmail.com', 'email', [...], null, 'email')
+ 5 SYSTEMPATH\Validation\Validation.php(182): CodeIgniter\Validation\Validation->processRules('email', 'email', 'fernandozacarias04@gmail.com', [...], [...])
+ 6 SYSTEMPATH\Controller.php(141): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\usuario_controller.php(27): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\usuario_controller->formValidation()
+ 9 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\usuario_controller))
+10 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-09-29 20:21:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 21:18:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 21:18:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 21:18:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 21:18:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-29 21:18:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

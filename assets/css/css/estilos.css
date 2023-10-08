@@ -1,0 +1,23 @@
+*
+{
+	margin: 0;
+	padding: 0;
+}
+
+/* Estilos del head_view */
+.head
+{
+	display: flex;
+	justify-content: space-between;	
+	background: green;
+	align-items: center;
+}
+
+.head h3
+{
+	color: white;
+	font-size: 35px;
+	padding-left: 10px;
+}
+
+
